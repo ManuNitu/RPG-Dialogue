@@ -10,6 +10,7 @@ public class ItemObject : MonoBehaviour
 
     //Get the InventoryItemData reference to know this item's values (name, cost, icon, etc)
     public InventoryItemData referenceItem;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Check if the player has entered this object's Trigger

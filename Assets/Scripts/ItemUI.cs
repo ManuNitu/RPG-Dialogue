@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+
 public class ItemUI : MonoBehaviour
 {
 
@@ -27,6 +28,7 @@ public class ItemUI : MonoBehaviour
         }
         StackNr.text = item.stackSize.ToString();
     }
+
     //This will be called when we press on this object (this object has a button script)
     public void onConsume()
     {

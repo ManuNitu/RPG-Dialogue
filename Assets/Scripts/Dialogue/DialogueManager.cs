@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
 using Ink.Runtime;
+
 public class DialogueManager : MonoBehaviour
 {
     [Header("Load Globals JSON")]
@@ -52,6 +53,7 @@ public class DialogueManager : MonoBehaviour
     {
         return instance;
     }
+
     private void Awake()
     {
         if(instance != null)
@@ -61,6 +63,7 @@ public class DialogueManager : MonoBehaviour
         instance = this;
         dialogueVariables = new DialogueVariables(loadGlobalsJSON);
     }
+
     private void Start()
     {
         //Set the variables to deafault
@@ -77,6 +80,7 @@ public class DialogueManager : MonoBehaviour
             index++;
         }
     }
+
     private void Update()
     {
         if (!dialogueIsPlaying)
@@ -94,6 +98,7 @@ public class DialogueManager : MonoBehaviour
             ContinueStory();
         }
     }
+
     //Start the dialogue using the dialogue file provided
     public void EnterDialogue(TextAsset inkJSON)
     {
@@ -107,6 +112,7 @@ public class DialogueManager : MonoBehaviour
         dialogueVariables.StartListening(currentStory);
         ContinueStory();
     }
+
     //Continue reading the next line in the dialogue file
     private void ContinueStory()
     {
@@ -124,6 +130,7 @@ public class DialogueManager : MonoBehaviour
             ExitDialogueMode();
         }
     }
+
     //Check the line for tags that will help us to set some thing in the game
     private void HandleStory(List<string> currentTags)
     {
@@ -176,6 +183,7 @@ public class DialogueManager : MonoBehaviour
         }
 
     }
+
     //Make the choices visible
     public void DisplayChoices()
     {

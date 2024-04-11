@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class PlayerMove : MonoBehaviour
 {
     public float speed;
     public Rigidbody2D rb;
     Vector2 movement;
+
     private void Update()
     {
         //Get the horizontal and vertical input of the keyboard
@@ -19,6 +21,7 @@ public class PlayerMove : MonoBehaviour
         //so that we will not go at twice the speed when we press a diagonal direction
         movement.Normalize();
     }
+
     private void FixedUpdate()
     {
         //Check if we are in a dialogue or if the inventory is opened

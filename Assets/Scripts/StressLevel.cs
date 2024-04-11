@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class StressLevel : MonoBehaviour
 {
     public Slider stress;
    
     private int maxHealth = 100;
-    public static int mentalHealth = 80; 
+    public static int mentalHealth = 80;
+
     private void Awake()
     {
         //set the stress slider's max value to the maxHealth
@@ -17,6 +19,7 @@ public class StressLevel : MonoBehaviour
         Ink.Runtime.Object obj = new Ink.Runtime.IntValue(mentalHealth);
         DialogueManager.GetInstance().SetVariableState("mentalHealth", obj);
     }
+
     private void Update()
     {
         //Get the mentalHealth variable from the Ink file and put it in an int variable

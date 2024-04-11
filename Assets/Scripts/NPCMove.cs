@@ -18,11 +18,13 @@ public class NPCMove : MonoBehaviour
     Vector2 difference;
     bool waiting;
     bool horizontal;
+
     private void Awake()
     {
         //Set the movePostion to the NPC's current position
         movePosition = transform.position;
     }
+
     private void Update()
     {
         //Check if the player is in range of the NPC and if dialogue is playing

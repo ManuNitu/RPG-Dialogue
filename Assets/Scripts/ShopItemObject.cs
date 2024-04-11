@@ -11,10 +11,12 @@ public class ShopItemObject : MonoBehaviour
     public GameObject visualCue;
 
     private bool playerInRange;
+
     private void Awake()
     {
         playerInRange = false;
     }
+
     private void Update()
     {
         //Check if the player is in range, if a dialogue is not playing and
@@ -65,6 +67,7 @@ public class ShopItemObject : MonoBehaviour
             onHandlePickUp();
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Check if the player has entered this object's Trigger
@@ -73,6 +76,7 @@ public class ShopItemObject : MonoBehaviour
             playerInRange = true;
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         //Check if the player has exitted this object's Trigger
@@ -81,6 +85,7 @@ public class ShopItemObject : MonoBehaviour
             playerInRange = false;
         }
     }
+
     //Add the item to the inventory and destroy it from the game
     public void onHandlePickUp()
     {

@@ -65,6 +65,7 @@ public class DialogueTrigger : MonoBehaviour
             visualCue.SetActive(false);
        
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Check if the player has entered this object's Trigger
@@ -73,6 +74,7 @@ public class DialogueTrigger : MonoBehaviour
             playerInRange = true;
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         //Check if the player has exitted this object's Trigger
